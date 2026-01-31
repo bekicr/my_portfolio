@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "slug": "ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce solution with real-time inventory management, secure payment processing, and responsive design.",
+    "longDescription": "Built a comprehensive e-commerce platform from scratch with React, Node.js, and MongoDB. Implemented features including user authentication, shopping cart, payment integration with Stripe, admin dashboard, and real-time inventory tracking. Optimized for performance with lazy loading and efficient state management.",
+    "techStack": ["React", "Node.js", "MongoDB", "Stripe API", "JWT", "Tailwind CSS"],
+    "category": "Full-Stack",
+    "liveUrl": "https://example-ecommerce.com",
+    "githubUrl": "https://github.com/username/ecommerce-platform",
+    "caseStudyUrl": "/projects/ecommerce-platform",
+    "image": "/images/projects/ecommerce.jpg",
+    "features": [
+      "User authentication and authorization",
+      "Shopping cart with local storage persistence",
+      "Secure payment processing with Stripe",
+      "Admin dashboard for inventory management",
+      "Real-time stock updates",
+      "Responsive design for all devices"
+    ],
+    "impact": {
+      "users": "10,000+",
+      "revenue": "$500K+",
+      "performance": "99.9% uptime"
+    }
+  },
+  {
+    "id": 2,
+    "slug": "task-management-app",
+    "title": "Task Management App",
+    "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
+    "longDescription": "Developed a comprehensive task management solution with real-time collaboration features. Implemented WebSocket connections for instant updates, drag-and-drop interface for task organization, team workspaces, and advanced filtering. Used React Query for server state management and optimized for large datasets.",
+    "techStack": ["React", "TypeScript", "Node.js", "Socket.io", "PostgreSQL", "Framer Motion"],
+    "category": "Full-Stack",
+    "liveUrl": "https://example-tasks.com",
+    "githubUrl": "https://github.com/username/task-management",
+    "caseStudyUrl": "/projects/task-management-app",
+    "image": "/images/projects/taskapp.jpg",
+    "features": [
+      "Real-time collaboration",
+      "Drag-and-drop task organization",
+      "Team workspaces and permissions",
+      "Advanced filtering and search",
+      "File attachments and comments",
+      "Mobile-responsive design"
+    ],
+    "impact": {
+      "users": "5,000+",
+      "teams": "500+",
+      "tasks": "1M+ completed"
+    }
+  },
+  {
+    "id": 3,
+    "slug": "weather-dashboard",
+    "title": "Weather Dashboard",
+    "description": "A modern weather dashboard with location-based forecasts, interactive maps, and comprehensive meteorological data visualization.",
+    "longDescription": "Created an intuitive weather dashboard that provides detailed meteorological information with beautiful data visualizations. Integrated multiple weather APIs for comprehensive data, implemented geolocation services, and built interactive charts for temperature trends and precipitation forecasts.",
+    "techStack": ["React", "Chart.js", "Weather API", "Geolocation API", "CSS Modules"],
+    "category": "Frontend",
+    "liveUrl": "https://example-weather.com",
+    "githubUrl": "https://github.com/username/weather-dashboard",
+    "caseStudyUrl": "/projects/weather-dashboard",
+    "image": "/images/projects/weather.jpg",
+    "features": [
+      "Location-based weather data",
+      "Interactive weather maps",
+      "7-day forecast with detailed metrics",
+      "Historical weather data",
+      "Weather alerts and notifications",
+      "Responsive design with PWA support"
+    ],
+    "impact": {
+      "users": "50,000+",
+      "locations": "1000+ cities",
+      "accuracy": "95% forecast accuracy"
+    }
+  },
+  {
+    "id": 4,
+    "slug": "social-media-analytics",
+    "title": "Social Media Analytics",
+    "description": "A comprehensive analytics platform for tracking social media performance across multiple platforms with AI-powered insights.",
+    "longDescription": "Built a powerful analytics platform that aggregates data from multiple social media platforms and provides actionable insights through AI-powered analysis. Implemented custom data visualization components, automated reporting systems, and predictive analytics for engagement trends.",
+    "techStack": ["React", "Python", "TensorFlow", "D3.js", "FastAPI", "Redis"],
+    "category": "Full-Stack",
+    "liveUrl": "https://example-analytics.com",
+    "githubUrl": "https://github.com/username/social-analytics",
+    "caseStudyUrl": "/projects/social-media-analytics",
+    "image": "/images/projects/analytics.jpg",
+    "features": [
+      "Multi-platform data integration",
+      "AI-powered insights and recommendations",
+      "Custom dashboard builder",
+      "Automated report generation",
+      "Real-time data synchronization",
+      "Advanced filtering and segmentation"
+    ],
+    "impact": {
+      "users": "2,000+",
+      "brands": "500+",
+      "data_points": "10M+ analyzed"
+    }
+  }
+]

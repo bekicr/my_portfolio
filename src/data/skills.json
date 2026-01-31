@@ -1,0 +1,152 @@
+{
+  "frontend": [
+    {
+      "name": "React",
+      "level": 90,
+      "icon": "react",
+      "color": "blue"
+    },
+    {
+      "name": "TypeScript",
+      "level": 85,
+      "icon": "typescript",
+      "color": "blue"
+    },
+    {
+      "name": "JavaScript",
+      "level": 95,
+      "icon": "javascript",
+      "color": "yellow"
+    },
+    {
+      "name": "HTML5",
+      "level": 95,
+      "icon": "html5",
+      "color": "orange"
+    },
+    {
+      "name": "CSS3",
+      "level": 90,
+      "icon": "css3",
+      "color": "blue"
+    },
+    {
+      "name": "Tailwind CSS",
+      "level": 88,
+      "icon": "tailwindcss",
+      "color": "cyan"
+    },
+    {
+      "name": "Next.js",
+      "level": 82,
+      "icon": "nextdotjs",
+      "color": "black"
+    },
+    {
+      "name": "Vue.js",
+      "level": 75,
+      "icon": "vuejs",
+      "color": "green"
+    }
+  ],
+  "backend": [
+    {
+      "name": "Node.js",
+      "level": 88,
+      "icon": "nodejs",
+      "color": "green"
+    },
+    {
+      "name": "Express.js",
+      "level": 85,
+      "icon": "express",
+      "color": "gray"
+    },
+    {
+      "name": "Python",
+      "level": 80,
+      "icon": "python",
+      "color": "blue"
+    },
+    {
+      "name": "Django",
+      "level": 75,
+      "icon": "django",
+      "color": "green"
+    },
+    {
+      "name": "MongoDB",
+      "level": 82,
+      "icon": "mongodb",
+      "color": "green"
+    },
+    {
+      "name": "PostgreSQL",
+      "level": 78,
+      "icon": "postgresql",
+      "color": "blue"
+    },
+    {
+      "name": "MySQL",
+      "level": 80,
+      "icon": "mysql",
+      "color": "blue"
+    },
+    {
+      "name": "Redis",
+      "level": 70,
+      "icon": "redis",
+      "color": "red"
+    }
+  ],
+  "tools": [
+    {
+      "name": "Git",
+      "level": 90,
+      "icon": "git",
+      "color": "orange"
+    },
+    {
+      "name": "Docker",
+      "level": 75,
+      "icon": "docker",
+      "color": "blue"
+    },
+    {
+      "name": "AWS",
+      "level": 70,
+      "icon": "amazonaws",
+      "color": "orange"
+    },
+    {
+      "name": "Figma",
+      "level": 85,
+      "icon": "figma",
+      "color": "purple"
+    },
+    {
+      "name": "VS Code",
+      "level": 95,
+      "icon": "visualstudiocode",
+      "color": "blue"
+    },
+    {
+      "name": "Webpack",
+      "level": 72,
+      "icon": "webpack",
+      "color": "blue"
+    },
+    {
+      "name": "Jest",
+      "level": 80,
+      "icon": "jest",
+      "color": "red"
+    },
+    {
+      "name": "CI/CD",
+      "level": 78,
+      "icon": "githubactions",
+      "color": "black"
+    }
+  ]
+}
