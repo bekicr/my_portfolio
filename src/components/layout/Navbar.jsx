@@ -25,11 +25,20 @@ const Navbar = () => {
   }, []);
 
   const handleNavClick = (href) => {
+    // Close mobile menu first
+    setIsMobileMenuOpen(false);
+    
+    // If we're on the project detail page, navigate back to home first
+    if (window.location.pathname !== '/') {
+      window.location.href = '/' + href;
+      return;
+    }
+    
+    // For hash navigation on the home page
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-    setIsMobileMenuOpen(false);
   };
 
   return (
