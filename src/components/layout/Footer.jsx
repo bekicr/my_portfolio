@@ -5,9 +5,9 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   const socialLinks = [
-    { name: 'GitHub', icon: '💻', url: 'https://github.com' },
-    { name: 'LinkedIn', icon: '💼', url: 'https://linkedin.com' },
-    { name: 'Twitter', icon: '🐦', url: 'https://twitter.com' }
+    { name: 'GitHub', icon: '💻', url: 'https://github.com/bekicr' },
+    { name: 'Instagram', icon: '�', url: 'https://www.instagram.com/bereket.ab__?utm_source=qr&igsh=MTJreGdqeG40eXV0cg==' },
+    { name: 'Telegram', icon: '✈️', url: 'https://t.me/bek_iii' }
   ];
 
   const quickLinks = [

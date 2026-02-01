@@ -1,106 +1,170 @@
 [
   {
     "id": 1,
-    "slug": "ecommerce-platform",
-    "title": "E-Commerce Platform",
-    "description": "A full-stack e-commerce solution with real-time inventory management, secure payment processing, and responsive design.",
-    "longDescription": "Built a comprehensive e-commerce platform from scratch with React, Node.js, and MongoDB. Implemented features including user authentication, shopping cart, payment integration with Stripe, admin dashboard, and real-time inventory tracking. Optimized for performance with lazy loading and efficient state management.",
-    "techStack": ["React", "Node.js", "MongoDB", "Stripe API", "JWT", "Tailwind CSS"],
-    "category": "Full-Stack",
-    "liveUrl": "https://example-ecommerce.com",
-    "githubUrl": "https://github.com/username/ecommerce-platform",
-    "caseStudyUrl": "/projects/ecommerce-platform",
-    "image": "/images/projects/ecommerce.jpg",
+    "slug": "chilaloshade-hms",
+    "title": "Chilaloshade Hospital Management System",
+    "description": "A comprehensive hospital management system for managing patients, staff, lab, pharmacy, billing, and administration.",
+    "longDescription": "Developed a real-world Hospital Management System to digitize hospital workflows including patient registration, appointments, laboratory results, pharmacy management, billing, and role-based access for hospital staff. Designed with scalability and real hospital operations in mind.",
+    "techStack": ["React", "Node.js", "Express", "MongoDB", "JWT"],
+    "category": "Healthcare / Full-Stack",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/bekicr/Chilaloshade-HMS.git",
+    "caseStudyUrl": "/projects/chilaloshade-hms",
+    "image": "/images/projects/hms.jpg",
     "features": [
-      "User authentication and authorization",
-      "Shopping cart with local storage persistence",
-      "Secure payment processing with Stripe",
-      "Admin dashboard for inventory management",
-      "Real-time stock updates",
-      "Responsive design for all devices"
-    ],
-    "impact": {
-      "users": "10,000+",
-      "revenue": "$500K+",
-      "performance": "99.9% uptime"
-    }
+      "Patient registration and appointments",
+      "Doctor and staff role management",
+      "Laboratory and pharmacy modules",
+      "Billing and reports",
+      "Role-based authentication"
+    ]
   },
   {
     "id": 2,
-    "slug": "task-management-app",
-    "title": "Task Management App",
-    "description": "A collaborative task management application with real-time updates, drag-and-drop functionality, and team collaboration features.",
-    "longDescription": "Developed a comprehensive task management solution with real-time collaboration features. Implemented WebSocket connections for instant updates, drag-and-drop interface for task organization, team workspaces, and advanced filtering. Used React Query for server state management and optimized for large datasets.",
-    "techStack": ["React", "TypeScript", "Node.js", "Socket.io", "PostgreSQL", "Framer Motion"],
-    "category": "Full-Stack",
-    "liveUrl": "https://example-tasks.com",
-    "githubUrl": "https://github.com/username/task-management",
-    "caseStudyUrl": "/projects/task-management-app",
-    "image": "/images/projects/taskapp.jpg",
+    "slug": "universal-clinic",
+    "title": "Universal Clinic System",
+    "description": "Clinic management system for handling appointments, patients, and medical records.",
+    "longDescription": "Built a clinic management platform focused on appointment scheduling, patient records, and doctor workflows. Designed for small to medium clinics to manage daily operations digitally.",
+    "techStack": ["React", "Node.js", "MongoDB"],
+    "category": "Healthcare / Full-Stack",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/bekicr/universal-clinic-.git",
+    "caseStudyUrl": "/projects/universal-clinic",
+    "image": "/images/projects/clinic.jpg",
     "features": [
-      "Real-time collaboration",
-      "Drag-and-drop task organization",
-      "Team workspaces and permissions",
-      "Advanced filtering and search",
-      "File attachments and comments",
-      "Mobile-responsive design"
-    ],
-    "impact": {
-      "users": "5,000+",
-      "teams": "500+",
-      "tasks": "1M+ completed"
-    }
+      "Appointment scheduling",
+      "Patient record management",
+      "Doctor dashboard",
+      "Secure login system"
+    ]
   },
   {
     "id": 3,
-    "slug": "weather-dashboard",
-    "title": "Weather Dashboard",
-    "description": "A modern weather dashboard with location-based forecasts, interactive maps, and comprehensive meteorological data visualization.",
-    "longDescription": "Created an intuitive weather dashboard that provides detailed meteorological information with beautiful data visualizations. Integrated multiple weather APIs for comprehensive data, implemented geolocation services, and built interactive charts for temperature trends and precipitation forecasts.",
-    "techStack": ["React", "Chart.js", "Weather API", "Geolocation API", "CSS Modules"],
-    "category": "Frontend",
-    "liveUrl": "https://example-weather.com",
-    "githubUrl": "https://github.com/username/weather-dashboard",
-    "caseStudyUrl": "/projects/weather-dashboard",
-    "image": "/images/projects/weather.jpg",
+    "slug": "home-service-platform",
+    "title": "Home Service Platform",
+    "description": "A service booking platform connecting customers with home service providers.",
+    "longDescription": "Developed a home service application that allows users to request services such as maintenance and repairs. Focused on user-friendly booking, service listings, and provider management.",
+    "techStack": ["React", "Node.js", "MongoDB"],
+    "category": "Full-Stack",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/bekicr/Homeservice.git",
+    "caseStudyUrl": "/projects/home-service-platform",
+    "image": "/images/projects/home-service.jpg",
     "features": [
-      "Location-based weather data",
-      "Interactive weather maps",
-      "7-day forecast with detailed metrics",
-      "Historical weather data",
-      "Weather alerts and notifications",
-      "Responsive design with PWA support"
-    ],
-    "impact": {
-      "users": "50,000+",
-      "locations": "1000+ cities",
-      "accuracy": "95% forecast accuracy"
-    }
+      "Service booking system",
+      "User and provider roles",
+      "Service listings",
+      "Responsive UI"
+    ]
   },
   {
     "id": 4,
-    "slug": "social-media-analytics",
-    "title": "Social Media Analytics",
-    "description": "A comprehensive analytics platform for tracking social media performance across multiple platforms with AI-powered insights.",
-    "longDescription": "Built a powerful analytics platform that aggregates data from multiple social media platforms and provides actionable insights through AI-powered analysis. Implemented custom data visualization components, automated reporting systems, and predictive analytics for engagement trends.",
-    "techStack": ["React", "Python", "TensorFlow", "D3.js", "FastAPI", "Redis"],
-    "category": "Full-Stack",
-    "liveUrl": "https://example-analytics.com",
-    "githubUrl": "https://github.com/username/social-analytics",
-    "caseStudyUrl": "/projects/social-media-analytics",
-    "image": "/images/projects/analytics.jpg",
+    "slug": "exam-ai-hub",
+    "title": "Exam AI Hub",
+    "description": "An AI-assisted platform for exams, practice, and learning support.",
+    "longDescription": "Built an AI-based educational platform designed to help students with exams and practice questions. The system focuses on intelligent assistance and improving learning efficiency.",
+    "techStack": ["React", "AI APIs", "Node.js"],
+    "category": "AI / Education",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/bekicr/exam-ai-hub.git",
+    "caseStudyUrl": "/projects/exam-ai-hub",
+    "image": "/images/projects/exam-ai.jpg",
     "features": [
-      "Multi-platform data integration",
-      "AI-powered insights and recommendations",
-      "Custom dashboard builder",
-      "Automated report generation",
-      "Real-time data synchronization",
-      "Advanced filtering and segmentation"
-    ],
-    "impact": {
-      "users": "2,000+",
-      "brands": "500+",
-      "data_points": "10M+ analyzed"
-    }
+      "AI-assisted exam support",
+      "Question generation or analysis",
+      "Student-friendly interface"
+    ]
+  },
+  {
+    "id": 5,
+    "slug": "ping-pong-game",
+    "title": "Ping Pong Game",
+    "description": "A simple interactive Ping Pong game built for learning and experimentation.",
+    "longDescription": "Created a browser-based Ping Pong game focusing on game logic, animations, and user interaction. Built as a fun project to strengthen JavaScript and UI skills.",
+    "techStack": ["JavaScript", "HTML", "CSS"],
+    "category": "Frontend / Game",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/bekicr/Ping-pong.git",
+    "caseStudyUrl": "/projects/ping-pong-game",
+    "image": "/images/projects/pingpong.jpg",
+    "features": [
+      "Game loop logic",
+      "Keyboard controls",
+      "Collision detection"
+    ]
+  },
+  {
+    "id": 6,
+    "slug": "ai-doctor-appointment-platform",
+    "title": "AI Doctor Appointment Platform",
+    "description": "An AI-driven healthcare platform for booking doctor appointments intelligently.",
+    "longDescription": "Worked on an AI-powered doctor appointment system that helps patients find suitable doctors and schedule appointments efficiently. Focused on healthcare workflows, intelligent matching, and scalable system design.",
+    "techStack": ["React", "Node.js", "MongoDB", "AI Logic"],
+    "category": "Healthcare / AI",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/Bereket-Hailu/AI-Driven-Doctor-Appointment-Platform.git",
+    "caseStudyUrl": "/projects/ai-doctor-appointment-platform",
+    "image": "/images/projects/ai-doctor.jpg",
+    "features": [
+      "Doctor appointment booking",
+      "AI-assisted doctor matching",
+      "Patient and doctor roles",
+      "Secure authentication"
+    ]
+  },
+  {
+    "id": 7,
+    "slug": "tour-and-travel-website",
+    "title": "Tour and Travel Website",
+    "description": "A travel website showcasing destinations and travel services.",
+    "longDescription": "Developed a tour and travel website to present destinations, travel packages, and services with a clean and attractive UI.",
+    "techStack": ["HTML", "CSS", "JavaScript"],
+    "category": "Frontend",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/Bereket-Hailu/Web-project.git",
+    "caseStudyUrl": "/projects/tour-and-travel-website",
+    "image": "/images/projects/travel.jpg",
+    "features": [
+      "Destination listings",
+      "Responsive layout",
+      "Clean UI design"
+    ]
+  },
+  {
+    "id": 8,
+    "slug": "news-website",
+    "title": "News Website",
+    "description": "A news application that displays current news articles.",
+    "longDescription": "Built a news web application that fetches and displays news content in an organized and readable format.",
+    "techStack": ["React", "News API"],
+    "category": "Frontend",
+    "liveUrl": "",
+    "githubUrl": "https://github.com/Bereket-Hailu/news-app.git",
+    "caseStudyUrl": "/projects/news-website",
+    "image": "/images/projects/news.jpg",
+    "features": [
+      "News listing",
+      "API integration",
+      "Responsive UI"
+    ]
+  },
+  {
+    "id": 9,
+    "slug": "ecommerce-platform",
+    "title": "E-Commerce Platform",
+    "description": "A full-stack e-commerce application with authentication, payments, and product management.",
+    "longDescription": "Built a complete e-commerce platform featuring user authentication, shopping cart, product management, and payment integration. Designed with real-world business flow in mind.",
+    "techStack": ["React", "Node.js", "MongoDB", "Stripe", "JWT"],
+    "category": "Full-Stack",
+    "liveUrl": "",
+    "githubUrl": "",
+    "caseStudyUrl": "/projects/ecommerce-platform",
+    "image": "/images/projects/ecommerce.jpg",
+    "features": [
+      "User authentication",
+      "Shopping cart",
+      "Payment integration",
+      "Admin product management"
+    ]
   }
 ]

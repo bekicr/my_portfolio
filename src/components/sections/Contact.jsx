@@ -143,29 +143,29 @@ const Contact = () => {
 
   const contactInfo = [
     {
-      icon: '',
+      icon: '📍',
       title: 'Location',
       content: 'Ethiopia',
       link: null
     },
     {
-      icon: '',
+      icon: '📧',
       title: 'Email',
       content: 'berekethailu26@gmail.com',
       link: 'mailto:berekethailu26@gmail.com'
     },
     {
-      icon: '',
-      title: 'Phone',
+      icon: '📱',
+      title: 'WhatsApp',
       content: '+251 951 026 370',
-      link: 'tel:+251951026370'
+      link: 'https://wa.me/251951026370'
     }
   ];
 
   const socialLinks = [
-    { name: 'GitHub', icon: '', url: 'https://github.com' },
-    { name: 'LinkedIn', icon: '', url: 'https://linkedin.com' },
-    { name: 'Twitter', icon: '', url: 'https://twitter.com' }
+    { name: 'GitHub', icon: '💻', url: 'https://github.com/bekicr' },
+    { name: 'Instagram', icon: '📷', url: 'https://www.instagram.com/bereket.ab__?utm_source=qr&igsh=MTJreGdqeG40eXV0cg==' },
+    { name: 'Telegram', icon: '✈️', url: 'https://t.me/bek_iii' }
   ];
 
   return (
