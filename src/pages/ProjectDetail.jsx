@@ -250,20 +250,21 @@ const ProjectDetail = () => {
                 </div>
               </motion.div>
 
-              {/* Impact Stats */}
-              <motion.div variants={itemVariants} className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-xl p-6 shadow-lg border border-primary-200 dark:border-primary-700">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Impact & Metrics</h3>
-                <div className="space-y-4">
-                  {Object.entries(project.impact).map(([key, value]) => (
-                    <div key={key}>
-                      <p className="text-sm text-gray-600 dark:text-gray-400 mb-1 capitalize">
-                        {key.replace(/([A-Z])/g, ' $1').trim()}
-                      </p>
-                      <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">{value}</p>
-                    </div>
-                  ))}
-                </div>
-              </motion.div>
+              {project.impact && (
+                <motion.div variants={itemVariants} className="bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-xl p-6 shadow-lg border border-primary-200 dark:border-primary-700">
+                  <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-6">Impact & Metrics</h3>
+                  <div className="space-y-4">
+                    {Object.entries(project.impact).map(([key, value]) => (
+                      <div key={key}>
+                        <p className="text-sm text-gray-600 dark:text-gray-400 mb-1 capitalize">
+                          {key.replace(/([A-Z])/g, ' $1').trim()}
+                        </p>
+                        <p className="text-2xl font-bold text-primary-600 dark:text-primary-400">{value}</p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              )}
 
               {/* Quick Actions */}
               <motion.div variants={itemVariants} className="bg-white dark:bg-dark-200 rounded-xl p-6 shadow-lg">

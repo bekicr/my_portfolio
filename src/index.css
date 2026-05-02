@@ -27,7 +27,11 @@
     margin: 0;
     min-width: 320px;
     min-height: 100vh;
-    @apply bg-gray-50 text-gray-900 dark:bg-dark-50 dark:text-dark-900 transition-colors duration-300;
+    @apply bg-slate-950 text-slate-100 transition-colors duration-300;
+    background:
+      radial-gradient(circle at top left, rgba(20, 184, 166, 0.18), transparent 28rem),
+      radial-gradient(circle at 80% 15%, rgba(59, 130, 246, 0.22), transparent 30rem),
+      linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%);
   }
 
   a {
@@ -50,15 +54,16 @@
 
 @layer components {
   .btn-primary {
-    @apply bg-primary-600 hover:bg-primary-700 text-white font-medium py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 hover:shadow-lg;
+    @apply bg-cyan-400 hover:bg-cyan-300 text-slate-950 font-semibold py-3 px-6 rounded-lg transition-all duration-300 shadow-lg shadow-cyan-500/20;
   }
 
   .btn-secondary {
-    @apply bg-transparent border-2 border-primary-600 text-primary-600 dark:text-primary-400 dark:border-primary-400 hover:bg-primary-600 hover:text-white font-medium py-3 px-6 rounded-lg transition-all duration-300;
+    @apply bg-white/5 border border-white/15 text-white hover:bg-white/10 hover:border-cyan-300/70 font-semibold py-3 px-6 rounded-lg transition-all duration-300;
   }
 
   .card {
-    @apply bg-white dark:bg-dark-100 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1;
+    @apply border border-white/10 rounded-xl shadow-2xl shadow-black/20 backdrop-blur-xl transition-all duration-300;
+    background: rgba(255, 255, 255, 0.08);
   }
 
   .section-padding {
@@ -67,5 +72,49 @@
 
   .container {
     @apply max-w-7xl mx-auto;
+  }
+
+  .section-surface {
+    @apply relative overflow-hidden;
+    background:
+      linear-gradient(180deg, rgba(15, 23, 42, 0.86), rgba(2, 6, 23, 0.92)),
+      radial-gradient(circle at 20% 20%, rgba(34, 211, 238, 0.11), transparent 24rem);
+  }
+
+  .glass-panel {
+    @apply border border-white/10 shadow-2xl shadow-black/25 backdrop-blur-xl;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .text-gradient {
+    @apply bg-gradient-to-r from-cyan-200 via-sky-300 to-emerald-200 bg-clip-text text-transparent;
+  }
+
+  .perspective-scene {
+    perspective: 1200px;
+    transform-style: preserve-3d;
+  }
+
+  .tilt-card {
+    transform-style: preserve-3d;
+    transition: transform 300ms ease, border-color 300ms ease, background 300ms ease;
+  }
+
+  .tilt-card:hover {
+    transform: translateY(-8px) rotateX(5deg) rotateY(-6deg);
+  }
+
+  .floating-grid {
+    background-image:
+      linear-gradient(rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+    background-size: 52px 52px;
+    mask-image: linear-gradient(to bottom, black, transparent 72%);
+  }
+
+  .orbital-ring {
+    border: 1px solid rgba(125, 211, 252, 0.34);
+    border-radius: 9999px;
+    transform-style: preserve-3d;
   }
 }

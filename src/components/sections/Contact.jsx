@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { submitContactForm } from '../../api';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -104,8 +105,7 @@ const Contact = () => {
     setSubmitStatus({ success: false, message: '' });
     
     try {
-      // Simulate API call - replace with actual API integration
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      await submitContactForm(formData);
       
       // Show success message
       setSubmitStatus({
@@ -169,7 +169,7 @@ const Contact = () => {
   ];
 
   return (
-    <section id="contact" className="section-padding bg-gray-50 dark:bg-dark-100">
+    <section id="contact" className="section-padding section-surface">
       <div className="container">
         {/* Section Header */}
         <motion.div 
@@ -181,13 +181,13 @@ const Contact = () => {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Get In <span className="bg-gradient-to-r from-primary-600 to-primary-800 dark:from-primary-400 dark:to-primary-600 bg-clip-text text-transparent">Touch</span>
+            Get In <span className="text-gradient">Touch</span>
           </motion.h2>
           <motion.p 
             variants={itemVariants}
-            className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+            className="text-lg text-slate-300 max-w-2xl mx-auto"
           >
             Let's connect! Feel free to reach out for collaborations, opportunities, or just to say hello
           </motion.p>
@@ -208,22 +208,22 @@ const Contact = () => {
                 <motion.div
                   key={item.title}
                   variants={itemVariants}
-                  className="flex items-start gap-4 p-4 bg-white dark:bg-dark-200 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 group"
+                  className="tilt-card flex items-start gap-4 p-4 glass-panel rounded-xl transition-all duration-300 group"
                 >
-                  <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+                  <div className="w-12 h-12 bg-cyan-300/10 border border-cyan-200/20 rounded-lg flex items-center justify-center flex-shrink-0 group-hover:bg-cyan-300/20 transition-colors">
                     <span className="text-2xl">{item.icon}</span>
                   </div>
                   <div className="flex-1">
-                    <h3 className="font-semibold text-gray-900 dark:text-white mb-1">{item.title}</h3>
+                    <h3 className="font-semibold text-white mb-1">{item.title}</h3>
                     {item.link ? (
                       <a 
                         href={item.link}
-                        className="text-primary-600 dark:text-primary-400 hover:underline transition-colors"
+                        className="text-cyan-200 hover:underline transition-colors"
                       >
                         {item.content}
                       </a>
                     ) : (
-                      <p className="text-gray-600 dark:text-gray-300">{item.content}</p>
+                      <p className="text-slate-300">{item.content}</p>
                     )}
                   </div>
                 </motion.div>
@@ -232,7 +232,7 @@ const Contact = () => {
 
             {/* Social Links */}
             <motion.div variants={itemVariants}>
-              <h3 className="font-semibold text-gray-900 dark:text-white mb-4">Connect With Me</h3>
+              <h3 className="font-semibold text-white mb-4">Connect With Me</h3>
               <div className="flex gap-3">
                 {socialLinks.map((social) => (
                   <motion.a
@@ -240,7 +240,7 @@ const Contact = () => {
                     href={social.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="w-12 h-12 bg-white dark:bg-dark-200 rounded-xl flex items-center justify-center shadow-lg hover:shadow-xl transition-all duration-300 group"
+                    className="w-12 h-12 glass-panel rounded-xl flex items-center justify-center transition-all duration-300 group"
                     variants={itemVariants}
                     whileHover={{ scale: 1.1, y: -2 }}
                     whileTap={{ scale: 0.9 }}
@@ -254,15 +254,15 @@ const Contact = () => {
             {/* Availability */}
             <motion.div 
               variants={itemVariants}
-              className="p-6 bg-gradient-to-br from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-xl border border-primary-200 dark:border-primary-700"
+              className="p-6 glass-panel rounded-xl border border-emerald-200/20"
             >
               <div className="flex items-center gap-3 mb-3">
                 <div className="w-10 h-10 bg-green-100 dark:bg-green-900/30 rounded-full flex items-center justify-center">
                   <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 </div>
-                <h4 className="font-semibold text-gray-900 dark:text-white">Available for Work</h4>
+                <h4 className="font-semibold text-white">Available for Work</h4>
               </div>
-              <p className="text-gray-600 dark:text-gray-300">
+              <p className="text-slate-300">
                 I'm currently open to freelance opportunities and interesting projects. 
                 Let's discuss how I can help bring your ideas to life!
               </p>
@@ -271,7 +271,7 @@ const Contact = () => {
           
           {/* Contact Form */}
           <motion.div 
-            className="bg-white dark:bg-dark-200 rounded-xl shadow-xl p-8"
+            className="glass-panel rounded-2xl p-8 tilt-card"
             variants={containerVariants}
             initial="hidden"
             whileInView="visible"
@@ -279,7 +279,7 @@ const Contact = () => {
           >
             <form onSubmit={handleSubmit} className="space-y-6">
               <motion.div variants={itemVariants}>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="name" className="block text-sm font-medium text-slate-200 mb-2">
                   Name *
                 </label>
                 <input
@@ -293,8 +293,8 @@ const Contact = () => {
                   className={`w-full px-4 py-3 rounded-lg border ${
                     formTouched.name && !formData.name 
                       ? 'border-red-300 dark:border-red-600' 
-                      : 'border-gray-300 dark:border-gray-600'
-                  } bg-white dark:bg-dark-100 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200`}
+                      : 'border-white/15'
+                  } bg-slate-950/50 text-white placeholder-slate-500 focus:ring-2 focus:ring-cyan-300 focus:border-transparent transition-all duration-200`}
                   required
                 />
                 {formTouched.name && !formData.name && (
@@ -303,7 +303,7 @@ const Contact = () => {
               </motion.div>
               
               <motion.div variants={itemVariants}>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="email" className="block text-sm font-medium text-slate-200 mb-2">
                   Email *
                 </label>
                 <input
@@ -317,8 +317,8 @@ const Contact = () => {
                   className={`w-full px-4 py-3 rounded-lg border ${
                     formTouched.email && (!formData.email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email))
                       ? 'border-red-300 dark:border-red-600' 
-                      : 'border-gray-300 dark:border-gray-600'
-                  } bg-white dark:bg-dark-100 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200`}
+                      : 'border-white/15'
+                  } bg-slate-950/50 text-white placeholder-slate-500 focus:ring-2 focus:ring-cyan-300 focus:border-transparent transition-all duration-200`}
                   required
                 />
                 {formTouched.email && !formData.email && (
@@ -330,7 +330,7 @@ const Contact = () => {
               </motion.div>
               
               <motion.div variants={itemVariants}>
-                <label htmlFor="subject" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="subject" className="block text-sm font-medium text-slate-200 mb-2">
                   Subject *
                 </label>
                 <input
@@ -344,8 +344,8 @@ const Contact = () => {
                   className={`w-full px-4 py-3 rounded-lg border ${
                     formTouched.subject && !formData.subject 
                       ? 'border-red-300 dark:border-red-600' 
-                      : 'border-gray-300 dark:border-gray-600'
-                  } bg-white dark:bg-dark-100 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200`}
+                      : 'border-white/15'
+                  } bg-slate-950/50 text-white placeholder-slate-500 focus:ring-2 focus:ring-cyan-300 focus:border-transparent transition-all duration-200`}
                   required
                 />
                 {formTouched.subject && !formData.subject && (
@@ -354,7 +354,7 @@ const Contact = () => {
               </motion.div>
               
               <motion.div variants={itemVariants}>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">
+                <label htmlFor="message" className="block text-sm font-medium text-slate-200 mb-2">
                   Message *
                 </label>
                 <textarea
@@ -368,8 +368,8 @@ const Contact = () => {
                   className={`w-full px-4 py-3 rounded-lg border ${
                     formTouched.message && !formData.message 
                       ? 'border-red-300 dark:border-red-600' 
-                      : 'border-gray-300 dark:border-gray-600'
-                  } bg-white dark:bg-dark-100 text-gray-900 dark:text-white placeholder-gray-500 dark:placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all duration-200 resize-none`}
+                      : 'border-white/15'
+                  } bg-slate-950/50 text-white placeholder-slate-500 focus:ring-2 focus:ring-cyan-300 focus:border-transparent transition-all duration-200 resize-none`}
                   required
                 />
                 {formTouched.message && !formData.message && (

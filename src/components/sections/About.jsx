@@ -1,5 +1,6 @@
-import React from 'react';
 import { motion } from 'framer-motion';
+import { FaEnvelope, FaGraduationCap, FaMapMarkerAlt, FaPhoneAlt, FaUserAlt, FaPalette, FaCode } from 'react-icons/fa';
+import profileImage from '../../assets/images/7I8A2639 copy.jpg';
 
 const About = () => {
   const containerVariants = {
@@ -7,31 +8,31 @@ const About = () => {
     visible: {
       opacity: 1,
       transition: {
-        delayChildren: 0.3,
-        staggerChildren: 0.2
+        delayChildren: 0.2,
+        staggerChildren: 0.14
       }
     }
   };
 
   const itemVariants = {
-    hidden: { y: 30, opacity: 0 },
+    hidden: { y: 28, opacity: 0 },
     visible: {
       y: 0,
       opacity: 1,
       transition: {
-        duration: 0.8,
+        duration: 0.7,
         ease: [0.6, -0.05, 0.01, 0.99]
       }
     }
   };
 
   const personalInfo = [
-    { label: 'Name', value: 'Bereket Hailu', icon: '👤' },
-    { label: 'Email', value: 'berekethailu26@gmail.com', icon: '📧' },
-    { label: 'Phone', value: '+251 951 026 370', icon: '📱' },
-    { label: 'Education', value: 'BSc in Computer Science, Arsi University (2025)', icon: '🎓' },
-    { label: 'Specialization', value: 'UI/UX Design, Frontend Development', icon: '💼' },
-    { label: 'Location', value: 'Ethiopia', icon: '📍' }
+    { label: 'Name', value: 'Bereket Hailu', icon: FaUserAlt },
+    { label: 'Email', value: 'berekethailu26@gmail.com', icon: FaEnvelope },
+    { label: 'Phone', value: '+251 951 026 370', icon: FaPhoneAlt },
+    { label: 'Education', value: 'BSc in Computer Science, Arsi University (2025)', icon: FaGraduationCap },
+    { label: 'Focus', value: 'UI/UX Design and Frontend Development', icon: FaPalette },
+    { label: 'Location', value: 'Addis Ababa, Ethiopia', icon: FaMapMarkerAlt }
   ];
 
   const skills = [
@@ -42,125 +43,95 @@ const About = () => {
   ];
 
   return (
-    <section id="about" className="section-padding bg-gray-50 dark:bg-dark-100">
+    <section id="about" className="section-padding section-surface">
       <div className="container">
-        {/* Section Header */}
-        <motion.div 
+        <motion.div
           className="text-center mb-16"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          <motion.h2 
-            variants={itemVariants}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
-          >
-            About <span className="bg-gradient-to-r from-primary-600 to-primary-800 dark:from-primary-400 dark:to-primary-600 bg-clip-text text-transparent">Me</span>
+          <motion.h2 variants={itemVariants} className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4">
+            About <span className="text-gradient">Me</span>
           </motion.h2>
-          <motion.p 
-            variants={itemVariants}
-            className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
-          >
-            Passionate about creating exceptional digital experiences through thoughtful design and clean code
+          <motion.p variants={itemVariants} className="text-lg text-slate-300 max-w-2xl mx-auto">
+            A designer-developer profile built around clean interfaces, smooth interaction, and practical product thinking.
           </motion.p>
         </motion.div>
 
-        {/* Main Content */}
-        <motion.div 
+        <motion.div
           className="grid lg:grid-cols-2 gap-12 items-center"
           variants={containerVariants}
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
         >
-          {/* Image Section */}
-          <motion.div variants={itemVariants} className="relative">
+          <motion.div variants={itemVariants} className="perspective-scene relative">
             <div className="relative mx-auto w-80 h-80 lg:w-96 lg:h-96">
-              {/* Background gradient */}
-              <div className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 rounded-2xl transform rotate-6"></div>
-              
-              {/* Image container */}
-              <div className="relative inset-0 bg-white dark:bg-dark-200 rounded-2xl shadow-2xl overflow-hidden">
-                <img 
-                  src="/src/assets/images/photo_2025-08-06_07-14-27.jpg" 
-                  alt="Bereket Hailu" 
-                  className="w-full h-full object-cover"
-                />
-              </div>
-
-              {/* Floating badges */}
               <motion.div
-                className="absolute -top-4 -right-4 bg-white dark:bg-dark-200 rounded-full px-4 py-2 shadow-lg"
-                animate={{
-                  y: [0, -10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse"
-                }}
+                className="absolute inset-0 rounded-[2rem] bg-gradient-to-br from-cyan-300/40 to-emerald-300/30 blur-sm"
+                animate={{ rotate: [8, -8, 8], scale: [1, 1.04, 1] }}
+                transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut' }}
+              />
+
+              <motion.div
+                className="relative h-full w-full overflow-hidden rounded-[2rem] glass-panel"
+                animate={{ rotateY: [-5, 5, -5], rotateX: [3, -3, 3], y: [0, -12, 0] }}
+                transition={{ duration: 8, repeat: Infinity, ease: 'easeInOut' }}
               >
-                <span className="text-sm font-medium text-gray-900 dark:text-white">🎨 Designer</span>
+                <img src={profileImage} alt="Bereket Hailu" className="w-full h-full object-cover" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/70 via-transparent to-transparent" />
               </motion.div>
 
               <motion.div
-                className="absolute -bottom-4 -left-4 bg-white dark:bg-dark-200 rounded-full px-4 py-2 shadow-lg"
-                animate={{
-                  y: [0, 10, 0],
-                }}
-                transition={{
-                  duration: 3,
-                  repeat: Infinity,
-                  repeatType: "reverse",
-                  delay: 1
-                }}
+                className="absolute -top-5 -right-5 glass-panel rounded-2xl px-4 py-3"
+                animate={{ y: [0, -10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse' }}
               >
-                <span className="text-sm font-medium text-gray-900 dark:text-white">💻 Developer</span>
+                <span className="flex items-center gap-2 text-sm font-semibold text-cyan-100"><FaPalette /> Designer</span>
+              </motion.div>
+
+              <motion.div
+                className="absolute -bottom-5 -left-5 glass-panel rounded-2xl px-4 py-3"
+                animate={{ y: [0, 10, 0] }}
+                transition={{ duration: 3, repeat: Infinity, repeatType: 'reverse', delay: 1 }}
+              >
+                <span className="flex items-center gap-2 text-sm font-semibold text-emerald-100"><FaCode /> Developer</span>
               </motion.div>
             </div>
           </motion.div>
 
-          {/* Text Content */}
-          <motion.div variants={itemVariants} className="space-y-6">
-            {/* Professional Summary */}
-            <div>
-              <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
-                Professional Summary
-              </h3>
-              <div className="space-y-4 text-gray-600 dark:text-gray-300 leading-relaxed">
+          <motion.div variants={itemVariants} className="space-y-7">
+            <div className="glass-panel rounded-2xl p-6">
+              <h3 className="text-2xl font-bold text-white mb-4">Professional Summary</h3>
+              <div className="space-y-4 text-slate-300 leading-relaxed">
                 <p>
-                  I'm a passionate UI/UX Designer and Frontend Developer with a Computer Science background from Arsi University. 
-                  I specialize in creating beautiful, intuitive user interfaces and translating them into responsive frontend implementations. 
-                  My expertise in Figma allows me to craft detailed design systems, interactive prototypes, and pixel-perfect interfaces for web and mobile applications.
+                  I am a UI/UX Designer and Frontend Developer with a Computer Science background from Arsi University.
+                  I focus on interfaces that are simple to use, visually refined, and responsive across devices.
                 </p>
                 <p>
-                  With a strong foundation in both design principles and frontend technologies, I bridge the gap between aesthetics and functionality. 
-                  I'm detail-oriented, collaborative, and constantly exploring the latest design trends and tools to create exceptional user experiences.
+                  My work connects design systems, interactive prototypes, and frontend implementation so ideas can move
+                  from Figma to production with clarity and polish.
                 </p>
               </div>
             </div>
 
-            {/* Skills Progress */}
-            <div>
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Core Competencies</h4>
-              <div className="space-y-3">
+            <div className="glass-panel rounded-2xl p-6">
+              <h4 className="text-lg font-semibold text-white mb-4">Core Competencies</h4>
+              <div className="space-y-4">
                 {skills.map((skill, index) => (
-                  <motion.div
-                    key={skill.name}
-                    className="space-y-1"
-                    variants={itemVariants}
-                    transition={{ delay: index * 0.1 }}
-                  >
+                  <motion.div key={skill.name} className="space-y-2" variants={itemVariants} transition={{ delay: index * 0.1 }}>
                     <div className="flex justify-between items-center">
-                      <span className="text-sm font-medium text-gray-700 dark:text-gray-300">{skill.name}</span>
-                      <span className="text-sm text-gray-500 dark:text-gray-400">{skill.level}%</span>
+                      <span className="text-sm font-medium text-slate-200">{skill.name}</span>
+                      <span className="text-sm text-cyan-100">{skill.level}%</span>
                     </div>
-                    <div className="w-full bg-gray-200 dark:bg-dark-300 rounded-full h-2">
+                    <div className="w-full bg-white/10 rounded-full h-2 overflow-hidden">
                       <motion.div
-                        className="bg-gradient-to-r from-primary-500 to-primary-600 h-2 rounded-full"
+                        className="bg-gradient-to-r from-cyan-300 to-emerald-300 h-2 rounded-full"
                         initial={{ width: 0 }}
                         whileInView={{ width: `${skill.level}%` }}
+                        viewport={{ once: true }}
                         transition={{ duration: 1, delay: index * 0.1 }}
                       />
                     </div>
@@ -169,39 +140,22 @@ const About = () => {
               </div>
             </div>
 
-            {/* Personal Info Grid */}
-            <div>
-              <h4 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">Personal Information</h4>
-              <div className="grid sm:grid-cols-2 gap-4">
-                {personalInfo.map((info, index) => (
-                  <motion.div
-                    key={info.label}
-                    className="flex items-center gap-3 p-3 bg-white dark:bg-dark-200 rounded-lg"
-                    variants={itemVariants}
-                    transition={{ delay: index * 0.1 }}
-                  >
-                    <span className="text-2xl">{info.icon}</span>
-                    <div>
-                      <p className="text-xs text-gray-500 dark:text-gray-400">{info.label}</p>
-                      <p className="text-sm font-medium text-gray-900 dark:text-white">{info.value}</p>
+            <div className="grid sm:grid-cols-2 gap-4">
+              {personalInfo.map((info) => {
+                const Icon = info.icon;
+                return (
+                  <motion.div key={info.label} className="tilt-card glass-panel rounded-xl p-4" variants={itemVariants}>
+                    <div className="flex items-start gap-3">
+                      <span className="mt-1 text-cyan-200"><Icon /></span>
+                      <div>
+                        <p className="text-xs uppercase tracking-[0.18em] text-slate-500">{info.label}</p>
+                        <p className="text-sm font-medium text-white">{info.value}</p>
+                      </div>
                     </div>
                   </motion.div>
-                ))}
-              </div>
+                );
+              })}
             </div>
-
-            {/* CTA Button */}
-            <motion.a
-              href="#contact"
-              className="btn-primary inline-flex items-center gap-2"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              Get In Touch
-              <svg className="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-              </svg>
-            </motion.a>
           </motion.div>
         </motion.div>
       </div>

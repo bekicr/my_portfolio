@@ -45,26 +45,26 @@ const Skills = () => {
     <motion.div
       variants={itemVariants}
       transition={{ delay: index * 0.05 }}
-      className="bg-white dark:bg-dark-200 rounded-xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 group"
+      className="tilt-card glass-panel rounded-xl p-6 transition-all duration-300 group"
     >
       <div className="flex items-center justify-between mb-4">
         <div className="flex items-center gap-3">
-          <div className="w-12 h-12 bg-primary-100 dark:bg-primary-900/30 rounded-lg flex items-center justify-center group-hover:bg-primary-200 dark:group-hover:bg-primary-900/50 transition-colors">
+          <div className="w-12 h-12 bg-cyan-300/10 border border-cyan-200/20 rounded-lg flex items-center justify-center group-hover:bg-cyan-300/20 transition-colors">
             <span className="text-xl">{skill.icon}</span>
           </div>
           <div>
-            <h4 className="font-semibold text-gray-900 dark:text-white">{skill.name}</h4>
-            <p className="text-sm text-gray-500 dark:text-gray-400">Proficiency</p>
+            <h4 className="font-semibold text-white">{skill.name}</h4>
+            <p className="text-sm text-slate-400">Proficiency</p>
           </div>
         </div>
         <div className="text-right">
-          <span className="text-2xl font-bold text-gray-900 dark:text-white">{skill.level}%</span>
+          <span className="text-2xl font-bold text-cyan-100">{skill.level}%</span>
         </div>
       </div>
       
       {/* Progress bar */}
       <div className="relative">
-        <div className="w-full bg-gray-200 dark:bg-dark-300 rounded-full h-3">
+        <div className="w-full bg-white/10 rounded-full h-3 overflow-hidden">
           <motion.div
             className={`h-3 rounded-full ${getSkillColor(skill.level)}`}
             initial={{ width: 0 }}
@@ -91,8 +91,9 @@ const Skills = () => {
   );
 
   return (
-    <section id="skills" className="section-padding">
-      <div className="container">
+    <section id="skills" className="section-padding bg-slate-950 relative overflow-hidden">
+      <div className="absolute inset-0 floating-grid opacity-15" />
+      <div className="container relative z-10">
         {/* Section Header */}
         <motion.div 
           className="text-center mb-16"
@@ -103,13 +104,13 @@ const Skills = () => {
         >
           <motion.h2 
             variants={itemVariants}
-            className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-4"
+            className="text-3xl md:text-4xl lg:text-5xl font-bold text-white mb-4"
           >
-            Technical <span className="bg-gradient-to-r from-primary-600 to-primary-800 dark:from-primary-400 dark:to-primary-600 bg-clip-text text-transparent">Skills</span>
+            Technical <span className="text-gradient">Skills</span>
           </motion.h2>
           <motion.p 
             variants={itemVariants}
-            className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto"
+            className="text-lg text-slate-300 max-w-2xl mx-auto"
           >
             Comprehensive skill set spanning frontend development, backend technologies, and modern development tools
           </motion.p>
@@ -129,8 +130,8 @@ const Skills = () => {
               onClick={() => setActiveCategory(category.id)}
               className={`flex items-center gap-2 px-6 py-3 rounded-xl font-medium transition-all duration-300 ${
                 activeCategory === category.id
-                  ? 'bg-primary-600 text-white shadow-lg scale-105'
-                  : 'bg-white dark:bg-dark-200 text-gray-600 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-dark-300'
+                  ? 'bg-cyan-400 text-slate-950 shadow-lg shadow-cyan-500/20 scale-105'
+                  : 'glass-panel text-slate-200 hover:border-cyan-300/60'
               }`}
               variants={itemVariants}
               whileHover={{ scale: 1.05 }}
@@ -170,8 +171,8 @@ const Skills = () => {
             <div className="w-20 h-20 bg-gradient-to-br from-blue-400 to-blue-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl">🎨</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Design Excellence</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-white mb-2">Design Excellence</h3>
+            <p className="text-slate-300">
               Creating intuitive and visually appealing user interfaces with modern design principles
             </p>
           </motion.div>
@@ -183,8 +184,8 @@ const Skills = () => {
             <div className="w-20 h-20 bg-gradient-to-br from-green-400 to-green-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl">⚡</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Performance Focus</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-white mb-2">Performance Focus</h3>
+            <p className="text-slate-300">
               Building fast, efficient applications with optimized code and best practices
             </p>
           </motion.div>
@@ -196,8 +197,8 @@ const Skills = () => {
             <div className="w-20 h-20 bg-gradient-to-br from-purple-400 to-purple-600 rounded-2xl flex items-center justify-center mx-auto mb-4">
               <span className="text-3xl">🚀</span>
             </div>
-            <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">Modern Stack</h3>
-            <p className="text-gray-600 dark:text-gray-300">
+            <h3 className="text-xl font-bold text-white mb-2">Modern Stack</h3>
+            <p className="text-slate-300">
               Leveraging cutting-edge technologies and frameworks for scalable solutions
             </p>
           </motion.div>
